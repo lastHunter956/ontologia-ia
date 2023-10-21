@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gouther/ontologies/2023/9/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gouther/ontologies/2023/9/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/gouther/ontologies/2023/9/untitled-ontology-2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-2" IRI="http://www.semanticweb.org/gouther/ontologies/2023/9/untitled-ontology-2#"/>
+    <Declaration>
+        <Class IRI="#Interfaz_de_Usuario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Motor_de_Traducción"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sistema_de_Traducción"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Texto_Traducido"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Texto_de_Entrada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Genera_Texto_Traducido"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Muestra_Traducción"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Tiene_Texto_de_Entrada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Traduce_Texto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Calidad_de_Traducción"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Usa_Lenguaje_de_Destino"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Usa_Lenguaje_de_Origen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Google_Translate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Motor_de_Traducción_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Texto_Traducido_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Texto_de_Entrada_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Usuario_1"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Sistema_de_Traducción"/>
+        <NamedIndividual IRI="#Google_Translate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Motor_de_Traducción"/>
+        <NamedIndividual IRI="#Motor_de_Traducción_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texto_Traducido"/>
+        <NamedIndividual IRI="#Texto_Traducido_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Texto_de_Entrada"/>
+        <NamedIndividual IRI="#Texto_de_Entrada_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Interfaz_de_Usuario"/>
+        <NamedIndividual IRI="#Usuario_1"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Google_Translate"/>
+        <NamedIndividual IRI="#Motor_de_Traducción_1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Google_Translate"/>
+        <NamedIndividual IRI="#Texto_de_Entrada_1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Google_Translate"/>
+        <NamedIndividual IRI="#Usuario_1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Motor_de_Traducción_1"/>
+        <NamedIndividual IRI="#Texto_Traducido_1"/>
+    </SameIndividual>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Calidad_de_Traducción"/>
+        <NamedIndividual IRI="#Texto_Traducido_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Usa_Lenguaje_de_Destino"/>
+        <NamedIndividual IRI="#Texto_Traducido_1"/>
+        <Literal>inglés</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Usa_Lenguaje_de_Origen"/>
+        <NamedIndividual IRI="#Texto_de_Entrada_1"/>
+        <Literal>español</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Genera_Texto_Traducido"/>
+        <Class IRI="#Motor_de_Traducción"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Muestra_Traducción"/>
+        <Class IRI="#Sistema_de_Traducción"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Tiene_Texto_de_Entrada"/>
+        <Class IRI="#Sistema_de_Traducción"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Traduce_Texto"/>
+        <Class IRI="#Sistema_de_Traducción"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Genera_Texto_Traducido"/>
+        <Class IRI="#Texto_Traducido"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Muestra_Traducción"/>
+        <Class IRI="#Interfaz_de_Usuario"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Tiene_Texto_de_Entrada"/>
+        <Class IRI="#Texto_de_Entrada"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Traduce_Texto"/>
+        <Class IRI="#Motor_de_Traducción"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Calidad_de_Traducción"/>
+        <Class IRI="#Texto_Traducido"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Usa_Lenguaje_de_Destino"/>
+        <Class IRI="#Texto_Traducido"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Usa_Lenguaje_de_Origen"/>
+        <Class IRI="#Texto_de_Entrada"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Calidad_de_Traducción"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Usa_Lenguaje_de_Destino"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Usa_Lenguaje_de_Origen"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
